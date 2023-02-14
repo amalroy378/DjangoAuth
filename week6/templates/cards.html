@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Actors
+{% endblock  %}
+
+{% block content %}
+<div class="container ">
+    {% for c in card %}
+
+    <div class="card row my-5 text-center m-5" style=" height: 360px; margin: 0 auto; width:18rem ; display: inline-block; ">
+        <div class="card-body">
+            <h5 class="card-title">{{c.actor_name}}</h5>
+            <p class="card-text">{{c.actor_industry}}</p>
+            <div style="height: 30%; ">
+             <img src="{{c.actor_img.url}}" class="card-img-top" alt=" " style="width: 100%;">
+            </div>
+        </div>
+    </div>
+ {% endfor %}
+</div>
+
+{% endblock  %}

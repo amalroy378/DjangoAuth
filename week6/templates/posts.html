@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Updates
+{% endblock  %}
+
+{% block content %}
+<div class="container text-center  ">
+    {% for p in post  %}
+    <div class="row my-5" style="width: 50%; margin: 0 auto;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{p.title}}</h5>
+              <p class="card-text">{{p.description}}</p>
+            </div>
+          </div>
+    </div>
+    {% endfor %}
+<div>
+    {% endblock  %}
